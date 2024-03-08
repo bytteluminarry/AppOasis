@@ -1,0 +1,355 @@
+@media only screen and (max-width: 1300px) {
+    .showcase {
+        flex-wrap: wrap;
+    }
+
+    .showcase .display {
+        flex-basis: 100%;
+        order: -1;
+    }
+
+    .cardview.col-2 {
+        grid-column: 1 span;
+    }
+
+    .showcase .display .inner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cardview.col-2 .image {
+        height: 240px;
+    }
+
+    #circular1 {
+        width: 120px;
+        height: 120px;
+        left: 10%;
+        top: 50%;
+        visibility: visible
+    }
+
+    #circular2 {
+        width: 100px;
+        height: 100px;
+        left: 17%;
+        top: 73%;
+    }
+
+    #circular3 {
+        width: 80px;
+        height: 80px;
+        left: 30%;
+        top: 88%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #circular3 {
+        width: 80px;
+        height: 80px;
+        left: 33%;
+        top: 85%;
+    }
+
+    .samples .inner {
+        width: 90%;
+    }
+
+    footer.main .inner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .pricing .sidebar {
+        display: none;
+    }
+
+    .pricing {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contact .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .showcase .display .inner {
+        padding-left: 10%;
+        padding-right: 10%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cardview.col-2 {
+        grid-column: 2 span;
+    }
+
+    .cardview.col-2 .image {
+        height: 160px;
+    }
+
+    #circular1 {
+        width: 100px;
+        height: 100px;
+        left: 10%;
+        top: 50%;
+        visibility: visible
+    }
+
+    #circular2 {
+        width: 80px;
+        height: 80px;
+        left: 19%;
+        top: 69%;
+    }
+
+    #circular3 {
+        width: 60px;
+        height: 60px;
+        left: 37%;
+        top: 79%;
+    }
+
+    #header-contact-me {
+        display: none;
+    }
+
+    #nav-contact-me {
+        display: block;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .informative .content h2 {
+        font-size: 2.3rem;
+    }
+
+    .informative .content p {
+        font-size: 1.4rem;
+        color: #444;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+    }
+
+    footer.main ul li a {
+        font-size: 1.4rem;
+    }
+
+    .contact p.main {
+        font-size: 1.4rem;
+    }
+
+    .sample p.description {
+        font-size: 1.4rem;
+    }
+
+    .samples p {
+        font-size: 1.4rem;
+    }
+
+    .skills p {
+        font-size: 1.4rem;
+    }
+
+    .contact .grid li div.text p {
+        font-size: 1.4rem;
+    }
+
+    .informative .content {
+        flex-basis: 60%;
+    }
+
+    .informative .display {
+        flex-basis: 40%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #circular1,
+    #circular2,
+    #circular3 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    header.main ul {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    .showcase .display {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .sample {
+        width: 300px;
+    }
+
+    .samples .inner {
+        width: 80%;
+    }
+
+    footer.main .inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .informative .content {
+        flex-basis: 80%;
+    }
+
+    .informative .display {
+        display: none;
+    }
+
+    .samples .inner {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .showcase .display .inner {
+        padding-left: 40px;
+        padding-right: 40px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sample {
+        width: 270px;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .samples .inner {
+        display: block;
+        width: auto;
+    }
+
+    .sample {
+        width: 380px;
+        margin-bottom: 80px;
+    }
+
+    .sample:nth-child(even) {
+        margin-top: 0;
+    }
+
+    .sample:last-child {
+        margin-bottom: 0;
+    }
+
+    .contact .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .showcase .display .inner {
+        padding-left: 20%;
+        padding-right: 20%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cardview.col-2 {
+        grid-column: 1 span;
+    }
+
+    .informative .content {
+        flex-basis: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .left-nav .inner .logo-container img {
+        width: 40px !important;
+        height: 40px;
+    }
+
+    .left-nav .inner .logo-container h1 {
+        font-size: 1.8rem;
+    }
+
+    .left-nav .inner ul li {
+        font-size: 2rem;
+    }
+
+    .showcase .display .inner {
+        padding-left: 17%;
+        padding-right: 17%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sample {
+        width: 90%;
+        margin-bottom: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .sample div.images img {
+        height: 100px;
+    }
+
+    .informative .content h2 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .informative .content p {
+        font-size: 1.4rem;
+    }
+
+    .informative .content button {
+        margin-top: 40px;
+        align-self: flex-start;
+        padding: 16px 20px;
+        font-size: 1.2rem;
+    }
+
+    .showcase .display .inner {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .left-nav .inner .logo-container h1 {
+        font-size: 1.4rem;
+    }
+
+    .left-nav .inner ul li {
+        font-size: 1.6rem;
+    }
+
+    .left-nav .inner ul li:hover span {
+        width: 60px;
+    }
+
+    .showcase .display .inner {
+        padding-left: 20px;
+        padding-right: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
