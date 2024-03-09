@@ -25,11 +25,21 @@ function closeLeftNav() {
     }, 300);
 }
 
-const elementsToHide = document.querySelectorAll('#main-informative *');
-elementsToHide.forEach((element, index) => {
-    if (index > 0)
-        element.classList.add('hidden');
-});
+function hideElements(containerId) {
+    const elementsToHide = document.querySelectorAll(`#${containerId} *`);
+    elementsToHide.forEach((element, index) => {
+        if (index > 0) {
+            element.classList.add('hidden');
+        }
+    });
+}
+
+hideElements('main-informative');
+hideElements('main-showcase');
+hideElements('main-pricing');
+hideElements('main-skills');
+hideElements('main-samples');
+hideElements('main-contact');
 
 document.addEventListener("DOMContentLoaded", function () {
     var lazyImages = document.querySelectorAll(".lazy-load");
@@ -40,12 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Function to handle animation
 function handleAnimation(entries, observer) {
     entries.forEach(entry => {
+        const children = entry.target.querySelectorAll('*');
         if (entry.isIntersecting) {
-            // Select all children of main-informative and show them
-            const children = entry.target.querySelectorAll('*');
             let interval = 100;
             children.forEach(child => {
                 setTimeout(() => {
@@ -53,21 +61,28 @@ function handleAnimation(entries, observer) {
                 }, interval);
                 interval += 40;
             });
-            // Unobserve the target once animation is applied
-            observer.unobserve(entry.target);
+            //observer.unobserve(entry.target);
+        }
+        else {
+            children.forEach(child => {
+                child.classList.remove('animate');
+            });
         }
     });
 }
 
-// Create a new Intersection Observer
 const observer = new IntersectionObserver(handleAnimation, {
-    root: null, // use the viewport as the root
-    rootMargin: '0px', // no margin
-    threshold: 0.3 // trigger when 30% of the element is visible
+    root: null, 
+    rootMargin: '0px',
+    threshold: 0.2
 });
 
-// Observe the main-informative section
 observer.observe(document.getElementById('main-informative'));
+observer.observe(document.getElementById('main-showcase'));
+observer.observe(document.getElementById('main-pricing'));
+observer.observe(document.getElementById('main-skills'));
+observer.observe(document.getElementById('main-samples'));
+observer.observe(document.getElementById('main-contact'));
 
-// Show the main-informative section
 document.getElementById('main-informative').style.opacity = '1';
+document.getElementById('main-showcase').style.opacity = '1';

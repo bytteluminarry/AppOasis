@@ -22,13 +22,11 @@
 
 .hidden{
     opacity: 0;
-    margin-top: 40px;
 }
 
 .animate{
     opacity: 1;
-    margin-top: 0;
-    transition: 0.7s;
+    transition: 0.5s ease-in-out;
 }
 
 ::-webkit-scrollbar {
@@ -654,8 +652,8 @@ header.main ul li:hover span {
     flex-direction: column;
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .pricing .sidebar .inner h2 {
