@@ -1,5 +1,9 @@
 const menu = document.getElementById('menu');
 const mainLeftNav = document.getElementById('main-left-nav');
+const mainLoader = document.getElementById('main-loader');
+const mainWrapper = document.getElementById('main-wrapper');
+
+mainWrapper.style.top = "100vh";
 
 menu.onclick = () => {
     openLeftNav();
@@ -48,6 +52,21 @@ document.addEventListener("DOMContentLoaded", function () {
         lazyImage.setAttribute("loading", "lazy");
         lazyImage.src = lazyImage.dataset.src;
     });
+
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
+    setTimeout(() => {
+        mainLoader.style.top = "40px";
+        setTimeout(() => {
+            mainLoader.style.top = "-100vh";
+            mainWrapper.style.top = "0";
+            setTimeout(() => {
+                document.body.style.overflowY = "auto";
+                mainLoader.outerHTML = "";
+            }, 400);
+        }, 1000);
+    }, 2000);
 });
 
 function handleAnimation(entries, observer) {
@@ -72,7 +91,7 @@ function handleAnimation(entries, observer) {
 }
 
 const observer = new IntersectionObserver(handleAnimation, {
-    root: null, 
+    root: null,
     rootMargin: '0px',
     threshold: 0.2
 });
